@@ -1,0 +1,12 @@
+.nav{
+    height: 70px;
+    display:grid;
+    grid-template-columns: 20% 68% 12%;
+    box-shadow: 2px 4px 6px 4px grey;
+}
+
+.col-3{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
