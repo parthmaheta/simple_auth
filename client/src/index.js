@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './app.js'
 
-ReactDOM.render(<h1 align='center'>Hellow</h1>,document.getElementById('root'))
+ReactDOM.render(<App/>,document.getElementById('root'))
 

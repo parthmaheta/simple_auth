@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-router-dom":"5.1.2",
+    "redux": "4.0.5",
+    "react-redux": "7.2.0"
   },
   "devDependencies": {
     "webpack": "4.43.0",
@@ -21,7 +24,9 @@
     "@babel/preset-env": "7.9.6",
     "@babel/preset-react": "7.9.4",
     "html-loader": "1.1.0",
-    "html-webpack-plugin": "4.3.0"
+    "html-webpack-plugin": "4.3.0",
+    "style-loader":"1.2.1",
+    "css-loader": "3.5.3"
   },
   "keywords": [],
   "author": "",
