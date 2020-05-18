@@ -21,21 +21,27 @@ export default function LOGIN(props){
           alert('both field is required')
         else
          {
-            
+            let url='login';
+            if(props.submit=='SignUp')
+             url='signup'
+             
              showLoading()
-             fetch('http://localhost:5000/login',{method:'post', headers: {'Content-Type':'application/x-www-form-urlencoded'},
+             fetch('http://localhost:5000/'+url,{method:'post', headers: {'Content-Type':'application/x-www-form-urlencoded'},
              body: 'UID='+UID+'&PW='+PW})
              .then(res=>res.text())
              .then(res=>{
                  if(res=='true')
-                    {      
-                        store.dispatch(user_login_sucess(UID))
-                        
-                        history.replace('/')
+                    {   
+                        if(props.submit=='Login')   
+                         store.dispatch(user_login_sucess(UID))
+                        else if(props.submit=='SignUp')
+                         alert('Registered Succesfully')                         
+                         history.replace('/')
                         
                     }
                  else
-                  { hideLoading()
+                  {
+                    hideLoading()
                     alert('Invalid')
                   }
              })
